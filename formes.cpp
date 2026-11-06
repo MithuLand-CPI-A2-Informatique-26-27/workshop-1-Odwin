@@ -18,6 +18,10 @@ class Circle {
     double perimeter(){
        return 2 * M_PI * r; 
     }
+    void set_pos( double px, double py){
+        x =px;
+        y= py;
+    }
 };
 
 // Set the position of the center
@@ -45,25 +49,24 @@ class Rectangle{
     double perimeter() {
     return 2 * (w + h);
     }
+    // Set the position of the top left corner
+    void set_pos(double px, double py ){
+        x= px;
+        y= py;
+    }
 };
 
 // TODO: Add a method to calculate the area of the rectangle
 
-// Set the position of the top left corner
-void set_pos(Rectangle *r, double x, double y) {
-    r->x = x;
-    r->y = y;
-}
-
 int main() {
     Circle c{0, 0, 1};
     std::cout << c.perimeter() << std::endl;
-    set_pos(&c, 1, 1);
+    c.set_pos( 1, 1);
     std::cout << "Coordinates of the center: (" << c.x << ", " << c.y << ")" << std::endl;
 
     Rectangle r{0, 0, 1, 2};
     std::cout << r.perimeter() << std::endl;
-    set_pos(&r, -1, -1);
+    r.set_pos( -1, -1);
     std::cout << "Coordinates of the top left corner: (" << r.x << ", " << r.y << ")" << std::endl;
     return 0;
 }
