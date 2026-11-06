@@ -9,6 +9,11 @@ class Circle {
 
     double r; // radius
 
+    Circle( double px, double py, double pr){
+        x = px;
+        y= py;
+        r =pr;
+    }
 };
 
 // Set the position of the center
@@ -25,7 +30,7 @@ double perimeter(Circle c) {
 //TODO: Add a method to calculate the area of the circle
 
 class Rectangle{
-    public: 
+    public:
     //Position of the top left corner
     double x;
     double y;
@@ -33,6 +38,12 @@ class Rectangle{
     double w; //width
     double h; //height
 
+    Rectangle( double px, double py, double pw, double ph){
+        x= px;
+        y= py;
+        w= pw;
+        h= ph;
+    }
 };
 
 // TODO: Add a method to calculate the area of the rectangle
